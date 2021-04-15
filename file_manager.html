@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>File Manager</title>
+    </head>
+    <body>
+        <header>
+            <h1 id="header">File Manager</h1>
+            <nav id="header-nav">
+                <a href="#content">Folders</a>
+                <a href="#footer">Footer</a>
+            </nav>
+            <details>
+                <summary>Sign in</summary>
+                <form id="sign-in">
+                    <label for="sign-in-nickname">Enter your nickname: </label>
+                    <input type="text" name="nickname" id="sign-in-nickname" minlength="4" maxlength="12">
+                    <label for="sign-in-password">Enter your password: </label>
+                    <input type="password" name="password" id="sign-in-password" minlength="8"> 
+                    <input type="submit" value="sign in" id="sign-in-button">
+                    <span class="error"></span>
+                    <a href="#">Forgot password?</a>
+                </form>
+            </details>
+            <br>
+            <details>
+                <summary>Sign up</summary>
+                <label for="sign-up-nickname">Enter your nickname: </label>
+                <input type="text" name="nickname" id="sign-up-nickname" minlength="4" maxlength="12">
+                <label for="sign-up-password">Enter password: </label>
+                <input type="password" name="password" id="sign-in-password" minlength="8">
+                <label for="sign-up-confirm-password">Confirm your password: </label>
+                <input type="password" name="confirmPassword" id="sign-up-confirm-password">
+                <input type="submit" value="sign up">
+                <span class="error"></span>
+            </details>
+            <hr>
+        </header>
+        <main>
+            <section id="menu">
+                <figure>
+                    <img src="#">
+                    <figcaption>
+                        caption
+                    </figcaption>
+                </figure>
+                <h2>Welcome (username)</h3>
+                <div id="functions">
+                    <form id="search">
+                        <label for="search-folder">find folders:</label>
+                        <input type="text" name="folder_name" id="search-folder">
+                        <input type="submit" value="search">
+                    </form>
+                    <br>
+                    <form id="sort">
+                        <label for="sort-folders">sort by</label>
+                        <input type="text" name="sort_params" id="sort-folders" list="params">
+                        <datalist id="params">
+                            <option value="folder_name"></option>
+                            <option value="folder_size"></option>
+                            <option value="add_time"></option>
+                        </datalist>
+                    </form>
+                    <br>
+                    <button id="add-folder">Add folder</button>
+                </div>
+            </section>
+            <section id="content">
+                <article id="folder">
+                    <h3>%folder name</h3>
+                    <figure>
+                        <img src="/" >
+                        <figcaption>folder pic</figcaption>
+                    </figure>
+                    <button>open</button>
+                    <button>delete</button>
+                </article>
+            </section>
+        </main>
+        <footer id="footer">
+            <nav id="footer-nav">
+                <a href="#header">Header</a>
+                <a href="#content">Folders</a>
+            </nav>
+            <p>copyright и какой-то текст</p>
+            <address><a href="https://github.com/alexey-cspr" target="_blank ">created by alexey-cspr</a></address>
+        </footer>
+    </body>
+</html>
