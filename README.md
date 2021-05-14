@@ -1,2 +1,0 @@
-# ititrod
-html+css+js
