@@ -1,0 +1,343 @@
+    <!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>File Database</title>
+        <link rel="shortcut icon" href="document.png" type="image/png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="top">
+            <div class="header">
+                <nav class="header-nav">
+                    <a href="#content">Home</a>
+                    <a href="#footer">Footer</a>
+                </nav>
+                <h1>File Database</h1>
+                <div class="auth-buttons">
+                    <button class="auth" id="sign-in-button" onclick="showAuthenticationForm()" >Sign In</button>
+                    <button class="auth" id="sign-up-button" onclick="showRegistrationForm()">Sing Up</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div id="action-auth">
+                <h2>authentication</h2>
+                <div class="form_basic">
+                    <form name="userAuth">
+                        <div class="form_basic_main">
+                            <input type="hidden" name="id" value="0" />
+                            <div class="form-group">
+                                <label for="name">Login:</label>
+                                <input class="form-control" name="login" />
+                            </div>
+                            <div class="form-group">
+                                <label for="age">Password:</label>
+                                <input class="form-control" name="password" type="password" />
+                            </div>
+                            <div class="panel-body">
+                                <button type="submit" class="btn btn-sm btn-primary">authentication</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="action-register">
+                <h2>registration</h2>
+                <div class="form_basic">
+                    <form name="userRegistration">
+                        <div class="form_basic_main">
+                            <input type="hidden" name="id" value="0" />
+                            <div class="form-group">
+                               <label for="name">Login:</label>
+                               <input class="form-control" name="login" />
+                            </div>
+                            <div class="form-group">
+                                <label for="age">Password:</label>
+                                <input class="form-control" name="password" type="password" />
+                            </div>
+                            <div class="panel-body">
+                                 <button type="submit" class="btn btn-sm btn-primary">register</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <section class="menu">
+                <h2 id="welcome-heading">Welcome (username)</h2>
+                <div class="functions">
+                    <form id="search">
+                        <label for="search-folder"></label>
+                        <input type="text" name="folder_name" id="search-folder" placeholder="write folder name">
+                        <input type="submit" value="Search" id="search-submit">
+                    </form>
+                    <br>
+                    <form id="sort">
+                        <label for="sort-folders">Sort by:</label>
+                        <input type="text" name="sort_params" id="sort-folders" list="params" placeholder="none">
+                        <datalist id="params">
+                            <option value="folder_name"></option>
+                            <option value="folder_size"></option>
+                            <option value="add_time"></option>
+                        </datalist>
+                    </form>
+                </div>
+                <button id="add-folder" onclick="GetUsers()">Add folder</button>
+            </section>
+            <section class="content">
+                <ul class="collection-list">
+                    <li>
+                        <article class="folder">
+                            <h3>Folder</h3>
+                            <figure>
+                                <img src="folder_picture.png" >
+                                <figcaption>folder pic</figcaption>
+                            </figure>
+                            <button class="functions-button">open</button>
+                            <button class="functions-button">delete</button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="folder">
+                            <h3>Folder</h3>
+                            <figure>
+                                <img src="folder_picture.png" >
+                                <figcaption>folder pic</figcaption>
+                            </figure>
+                            <button class="functions-button">open</button>
+                            <button class="functions-button">delete</button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="folder">
+                            <h3>Folder</h3>
+                            <figure>
+                                <img src="folder_picture.png" >
+                                <figcaption>folder pic</figcaption>
+                            </figure>
+                            <button class="functions-button">open</button>
+                            <button class="functions-button">delete</button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="folder">
+                            <h3>Folder</h3>
+                            <figure>
+                                <img src="folder_picture.png" >
+                                <figcaption>folder pic</figcaption>
+                            </figure>
+                            <button class="functions-button">open</button>
+                            <button class="functions-button">delete</button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="folder">
+                            <h3>Folder</h3>
+                            <figure>
+                                <img src="folder_picture.png" >
+                                <figcaption>folder pic</figcaption>
+                            </figure>
+                            <button class="functions-button">open</button>
+                            <button class="functions-button">delete</button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="folder">
+                            <h3>Folder</h3>
+                            <figure>
+                                <img src="folder_picture.png" >
+                                <figcaption>folder pic</figcaption>
+                            </figure>
+                            <button class="functions-button">open</button>
+                            <button class="functions-button">delete</button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="folder">
+                            <h3>Folder</h3>
+                            <figure>
+                                <img src="folder_picture.png" >
+                                <figcaption>folder pic</figcaption>
+                            </figure>
+                            <button class="functions-button">open</button>
+                            <button class="functions-button">delete</button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="folder">
+                            <h3>Folder</h3>
+                            <figure>
+                                <img src="folder_picture.png" >
+                                <figcaption>folder pic</figcaption>
+                            </figure>
+                            <button class="functions-button">open</button>
+                            <button class="functions-button">delete</button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="folder">
+                            <h3>Folder</h3>
+                            <figure>
+                                <img src="folder_picture.png" >
+                                <figcaption>folder pic</figcaption>
+                            </figure>
+                            <button class="functions-button">open</button>
+                            <button class="functions-button">delete</button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="folder">
+                            <h3>Folder</h3>
+                            <figure>
+                                <img src="folder_picture.png" >
+                                <figcaption>folder pic</figcaption>
+                            </figure>
+                            <button class="functions-button">open</button>
+                            <button class="functions-button">delete</button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="folder">
+                            <h3>Folder</h3>
+                            <figure>
+                                <img src="folder_picture.png" >
+                                <figcaption>folder pic</figcaption>
+                            </figure>
+                            <button class="functions-button">open</button>
+                            <button class="functions-button">delete</button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="folder">
+                            <h3>Folder</h3>
+                            <figure>
+                                <img src="folder_picture.png" >
+                                <figcaption>folder pic</figcaption>
+                            </figure>
+                            <button class="functions-button">open</button>
+                            <button class="functions-button">delete</button>
+                        </article>
+                    </li>
+            </ul>
+            </section>
+        </main>
+        <footer class="footer">
+            <nav class="footer-nav">
+                <a href="#header">Header</a>
+                <a href="#content">Folders</a>
+            </nav>
+            <address><a href="https://github.com/alexey-cspr" id="github-link">created by alexey-cspr</a></address>
+                <section class="logos">
+                    <figure class="logo">
+                        <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/po4irikaem">
+                            <img alt="Instagram picture" src="insta.png">
+                        </a>
+                    </figure>
+                    <figure class="logo">
+                        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/CasperAlexey">
+                            <img alt="Twitter picture" src="twitter.png">
+                        </a>
+                    </figure>
+                    <figure class="logo">
+                        <a target="_blank" rel="noopener noreferrer" href="https://vk.com/csrpz">
+                            <img alt="Instagram picture" src="vk.png">
+                        </a>
+                    </figure>
+                </section>
+        </footer>
+        <script >
+
+            async function GetUsers(){
+                const response = await fetch("api/users/3",{
+                    method: "GET", 
+                    headers: { "Accept": "application/json", "Content-Type": "application/json" }
+                })
+                if(response.ok === true){
+                    const users = await response
+                    alert(users)
+                }
+            }
+
+            async function AuthUser(userLogin, userPassword) {
+
+                const response = await fetch("api/users", {
+                    method: "POST",
+                    headers: { "Accept": "application/json", "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        login: userLogin,
+                        password: userPassword,
+                        action: "auth"
+                    })
+                });
+                if (response.ok === true) {
+                    const user = await response.json();
+                    const form = document.forms["userAuth"];
+                    form.reset();
+                    form.elements["id"].value = 0;
+                    alert(user.authResult)
+                    let register_form = document.getElementById('action-auth')
+                    register_form.style.visibility = 'hidden'
+                }
+            }
+
+            async function RegisterUser(userLogin, userPassword) {
+
+                const response = await fetch("api/users", {
+                    method: "POST",
+                    headers: { "Accept": "application/json", "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        login: userLogin,
+                        password: userPassword,
+                        action: "register"
+                    })
+                });
+                if (response.ok === true) {
+                    const user = await response.json();
+                    const form = document.forms["userRegistration"];
+                    form.reset();
+                    form.elements["id"].value = 0;
+                    alert(user.login + " registered");
+                    let register_form = document.getElementById('action-register')
+                    register_form.style.visibility = 'hidden'
+
+                }
+            }
+
+            document.forms["userAuth"].addEventListener("submit", e => {
+                e.preventDefault();
+                const form = document.forms["userAuth"];
+                const id = form.elements["id"].value;
+                const name = form.elements["login"].value;
+                const age = form.elements["password"].value;
+                AuthUser(name, age);
+            });
+
+            document.forms["userRegistration"].addEventListener("submit", e => {
+                e.preventDefault();
+                const form = document.forms["userRegistration"];
+                const id = form.elements["id"].value;
+                const name = form.elements["login"].value;
+                const age = form.elements["password"].value;
+                RegisterUser(name, age);
+            });
+
+
+            function toAnchor() {
+                window.location = "#welcome-heading";
+            }
+
+            function showAuthenticationForm(){
+                let register_form = document.getElementById('action-auth')
+                register_form.style.visibility = 'visible'
+            }
+            function showRegistrationForm(){
+                let register_form = document.getElementById('action-register')
+                register_form.style.visibility = 'visible'
+            }
+        </script>
+    </body>
+</html>

@@ -247,3 +247,42 @@ h2{
     to
         {transform: translateX(30em) skewX(-45deg)}
 }
+
+.form_basic {
+	text-align: center;
+}
+.form_basic_main {
+	text-align: center;
+}
+
+input.form-control {
+    margin-top: 9px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 35px;
+    border-radius: 25px;
+    outline:none;
+    font-size: 19px;
+}
+input.form-control:focus {
+    border-color: #a00020; 
+}
+
+#action-register, #action-auth{
+	width: 450px;
+	height: 330px;
+	background-color:rgba(195, 237, 248);
+	margin: 25px;
+	padding: 25px;
+    border-radius: 20px;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    z-index: 1;
+    visibility: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+#action-register h2, #action-auth h2 {
+	text-align: center;
+    color:white;
+}
