@@ -139,6 +139,5 @@ app.listen(5500, function(){
     console.log("Сервер ожидает подключения...");
 });
 
-
-
+console.log('hello')
 
